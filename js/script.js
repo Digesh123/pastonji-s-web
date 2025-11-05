@@ -105,5 +105,33 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Inject Footer component
+document.addEventListener("DOMContentLoaded", () => {
+  const mountFooter = document.getElementById("footer-placeholder");
+  if (!mountFooter) return;
+
+  fetch("components/footer.html")
+    .then(res => res.text())
+    .then(html => {
+      mountFooter.innerHTML = html;
+    })
+    .catch(err => console.error("Footer load error:", err));
+});
+
+// ✅ Navbar background change when scrolling
+window.addEventListener("scroll", () => {
+  const navbar = document.querySelector(".navbar");
+  if (window.scrollY > 2000) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+document.querySelector('a[href="index.html#products"]').addEventListener("click", (e) => {
+  if (location.pathname.includes("index.html")) {
+    e.preventDefault();
+    document.querySelector("#products").scrollIntoView({ behavior: "smooth" });
+  }
+});
 
 

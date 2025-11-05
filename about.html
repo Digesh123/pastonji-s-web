@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Pastonji Ice Cream</title>
+
+  <!-- ✅ Page-specific stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --red: #d12d2d;
+  --cream: #fff8f3;
+  --dark: #1b1b1b;
+}
+
+body {
+  background: #ffffff;
+  color: var(--dark);
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 6%;
+}
+
+/* ✅ HERO */
+.about-hero {
+  background: linear-gradient(145deg, var(--red), #ff4d4d);
+  padding: 160px 6% 140px;
+  text-align: center;
+  color: white;
+}
+
+.about-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 900;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-top: 8px;
+}
+
+/* ✅ STORY SECTION */
+/* ✅ BACKGROUND IMAGE STORY SECTION */
+.story-section.bg-image {
+  position: relative;
+  min-height: 90vh;
+  padding: 140px 0;
+  background-image: url("./assets/images/s1.png"); /* <-- replace with your Kaali-Peeli Taxi image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+/* Dark overlay for readability */
+.story-section .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+}
+
+/* Content on top */
+.story-content {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  color: white;
+  max-width: 850px;
+  margin: auto;
+}
+
+.story-content h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.story-content p {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+
+/* Highlighted Quote */
+.quote-box {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 18px 26px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  border-left: 4px solid #ffdd66;
+}
+
+/* ✅ RESPONSIVE */
+@media (max-width: 900px) {
+  .story-section.bg-image {
+    padding: 110px 0;
+  }
+
+  .story-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .story-content p {
+    font-size: 1rem;
+  }
+}
+
+
+
+/* Highlighted info */
+.highlight-box {
+  background: var(--cream);
+  padding: 40px;
+  border-radius: 14px;
+  border: 1px solid #f0f0f0;
+}
+
+.highlight-box h3 {
+  color: var(--red);
+  margin-bottom: 8px;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+
+
+/* ✅ VALUES SECTION */
+.values-section {
+  padding: 120px 0;
+  background: #fdf8f4;
+  text-align: center;
+}
+
+.values-section h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 60px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.value-card {
+  background: white;
+  padding: 45px 25px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  transition: transform .3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+}
+
+.value-card span {
+  font-size: 2.8rem;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.value-card h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: var(--red);
+  font-weight: 700;
+}
+
+/* ✅ RESPONSIVE */
+@media(max-width: 900px) {
+  .story-grid {
+    flex-direction: column;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<!-- ✅ Navbar injected via JS -->
+<div id="navbar-placeholder"></div>
+
+<!-- ✅ HERO SECTION -->
+<section class="about-hero">
+  <div class="container">
+    <h1>We Are Pastonji Ice Cream</h1>
+    <p>Crafting happiness, inspired by the unstoppable spirit of Mumbai.</p>
+  </div>
+</section>
+
+<!-- ✅ MAIN BRAND STORY -->
+<!-- <section class="story-section">
+  <div class="container story-grid">
+
+    <div class="story-left">
+      <h2>Where Quality Meets Innovation</h2>
+      <p>
+        Pastonji Ice Cream is a brand owned by <strong>Pastonji Brands and Holdings</strong>.
+        The manufacturing of the ice cream is handled by <strong>KC Engineering</strong>,
+        ensuring high standards of production quality and efficiency.
+      </p>
+      <p>
+        Marketing & distribution are managed by <strong>Kings Ice Cream Limited</strong>.
+        Leveraging deep industry expertise, Kings Ice Cream expands the brand’s market reach
+        across India.
+      </p>
+      <p>
+        Together, these divisions collaborate to deliver a premium ice cream experience to our customers.
+      </p>
+    </div>
+
+    <div class="story-right">
+      <div class="highlight-box">
+        <h3>Mumbai — The Soul of Pastonji</h3>
+        <p>Bold, innovative, diverse — just like our city.</p>
+        <p><strong>We are the Kali. We are the Peeli. We are Mumbai. We are Pastonji.</strong></p>
+      </div>
+    </div>
+
+  </div>
+</section> -->
+<!-- ✅ MAIN BRAND STORY (Refined with image/visual area) -->
+<!-- ✅ MAIN BRAND STORY (Background Image Section) -->
+<section class="story-section bg-image">
+  <div class="overlay"></div>
+
+  <div class="container story-content">
+    <h2>Inspired by Mumbai’s Spirit</h2>
+
+    <p>
+      Pastonji Ice Cream is a brand owned by <strong>Pastonji Brands and Holdings</strong>.
+      The manufacturing is handled by <strong>KC Engineering</strong>, ensuring the highest
+      standards of quality and efficiency.
+    </p>
+
+    <p>
+      Marketing and distribution are managed by <strong>Kings Ice Cream Limited</strong>,
+      leveraging strong market expertise to expand our reach across India.
+    </p>
+
+    <p>
+      Together, these divisions collaborate to deliver a premium ice-cream experience.
+    </p>
+
+    <div class="quote-box">
+      <p><strong>We are the Kali. We are the Peeli. We are Mumbai. We are Pastonji.</strong></p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ✅ VALUES / PHILOSOPHY -->
+<section class="values-section">
+  <div class="container">
+    <h2>What Defines Us</h2>
+
+    <div class="values-grid">
+
+      <div class="value-card">
+        <span>🍨</span>
+        <h4>Premium Ingredients</h4>
+        <p>We use only the finest ingredients from trusted suppliers.</p>
+      </div>
+
+      <div class="value-card">
+        <span>🚀</span>
+        <h4>Innovation</h4>
+        <p>We continuously experiment with new flavors and textures.</p>
+      </div>
+
+      <div class="value-card">
+        <span>🌱</span>
+        <h4>Sustainability</h4>
+        <p>Our production practices aim for minimal environmental impact.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Footer (injected by JS) -->
+<div id="footer-placeholder"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
